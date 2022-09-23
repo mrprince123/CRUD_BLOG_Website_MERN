@@ -1,10 +1,12 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const BlogModel = require('./models/Blog');
-const url = "mongodb+srv://prince123:Prince123@blogclusterone.3vsefzr.mongodb.net/?retryWrites=true&w=majority";
+const url = process.env.URL;
 const cors = require('cors');
 const app = express();
 
+console.log(url);
 // Installed the cors and use it
 
 app.use(express.json()); // to get the data in json form.
